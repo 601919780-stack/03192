@@ -322,14 +322,7 @@
 
     </main>
 
-    <!-- 底部信息 / 社交链接 -->
-    <footer class="flex justify-between items-start border-t-[2px] border-[#1b4321] pt-2 mt-4">
-      <h2 class="text-xl md:text-2xl uppercase font-normal cursor-pointer hover:opacity-70 transition-opacity">INFO</h2>
-      <h2 class="text-xl md:text-2xl uppercase font-normal cursor-pointer hover:opacity-70 transition-opacity">INSTAGRAM</h2>
-    </footer>
-
-  </div>
-<!-- 详情页弹窗 (Overlay) -->
+   <!-- 详情页弹窗 (Overlay) -->
   <div id="detail-modal" class="fixed inset-0 z-50 bg-[#f0f0f0] flex flex-col transition-all duration-500 ease-out opacity-0 pointer-events-none translate-y-12">
     <!-- 弹窗顶部导航：左侧返回，右侧标题 -->
     <div class="flex justify-between items-end border-b-[2px] border-[#1b4321] pb-2 mb-2 px-4 py-6 md:px-8 md:py-8 shrink-0 bg-[#f0f0f0]">
@@ -340,17 +333,13 @@
       <h1 id="modal-title" class="text-xl md:text-2xl uppercase font-normal text-right">PROJECT TITLE</h1>
     </div>
     
-    <!-- 无缝长图滚动区域 -->
-    <div class="flex-grow overflow-y-auto no-scrollbar w-full flex flex-col max-w-7xl mx-auto">
-      <!-- 随机高清图片展位 (利用 block 和去掉 margin 实现无缝拼接) -->
-      <img src="img_1.jpg" class="w-full h-auto block object-cover" alt="Detail 1">
-      <img src="img_1.jpg" class="w-full h-auto block object-cover" alt="Detail 2">
-      <img src="img_1.jpg" class="w-full h-auto block object-cover" alt="Detail 3">
-      <img src="img_1.jpg" class="w-full h-auto block object-cover" alt="Detail 4">
+    <!-- 动态无缝长图滚动区域 -->
+    <div id="detail-images-container" class="flex-grow overflow-y-auto no-scrollbar w-full flex flex-col max-w-7xl mx-auto">
+      <!-- 这里的图片将被 JavaScript 动态替换 -->
     </div>
   </div>
 
-<!-- 交互逻辑脚本 -->
+  <!-- 交互逻辑脚本 -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       
@@ -430,15 +419,18 @@
             imagesContainer.appendChild(imgEl);
           });
           
-          // 每次打开弹窗，确保从最顶端开始看
-          imagesContainer.scrollTop = 0;
-          
           // 触发丝滑显示动效 (透明度0->1，位置底部上浮)
           modal.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-12');
           modal.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
           
           // 禁用底层页面滚动，防止滑动穿透
           document.body.style.overflow = 'hidden';
+
+          // 加入一个短延时，确保弹窗可见、图片载入后，强制滚动条回到最顶端
+          setTimeout(() => {
+            imagesContainer.scrollTo({ top: 0, behavior: 'instant' });
+            imagesContainer.scrollTop = 0;
+          }, 50);
         });
       });
 
