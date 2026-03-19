@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDesign - 作品集</title>
+  <!-- 引入 Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 隐藏横向滚动条的自定义样式 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+</head>
+<!-- 主容器：设置浅灰背景色、墨绿色文字和全局字体，并注入 -4% (-0.04em) 字间距 -->
+<body class="bg-[#f0f0f0] text-[#1b4321] font-sans" style="letter-spacing: -0.04em;">
+  <div class="min-h-screen px-4 py-6 md:px-8 md:py-8 flex flex-col">
+    
+    <!-- 顶部导航 / 网站标题 -->
+    <header class="flex justify-between items-end border-b-[2px] border-[#1b4321] pb-2 mb-2">
+      <h1 class="text-xl md:text-2xl font-normal">REDesign</h1>
+      <h1 class="text-xl md:text-2xl uppercase font-normal">FUTURO</h1>
+    </header>
+
+    <!-- 作品列表主体内容 -->
+    <main class="flex-grow">
+      
+      <!-- 项目 1: T-BONE (演示：只显示 1 张图片) -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <!-- 第一列：项目名称与年份 -->
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">T-BONE</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2020</p>
+        </div>
+        <!-- 第二列：项目详细信息 -->
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Stool</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Furniture</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Recycled Plastic</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2020</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Flatpack</span></li>
+          </ul>
+        </div>
+        <!-- 第三列：图片展示区 -->
+        <!-- 说明：根据实际图片数量，保留 1 到 4 个内部的区块即可。 -->
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <!-- 图片 1 -->
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center">
+              <svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              <span class="text-xs text-[#1b4321]/60">图片展位 (1/1)</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 2: STACK (演示：最大显示 4 张图片) -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">STACK</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2019</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Shelving System</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Furniture</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Powder-coated Steel</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2019</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Flatpack, stackable</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <!-- 图片 1 -->
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (1/4)</span></div>
+          </div>
+          <!-- 图片 2 -->
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (2/4)</span></div>
+          </div>
+          <!-- 图片 3 -->
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (3/4)</span></div>
+          </div>
+          <!-- 图片 4 -->
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (4/4)</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 3: GIRAFFE (演示：显示 3 张图片) -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">GIRAFFE</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2020</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Trestle</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Furniture (Complement)</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Anodised Aluminum</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2020</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Flatpack, Customisable</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (1/3)</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (2/3)</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (3/3)</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 4: DARLING (演示：显示 2 张图片) -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">DARLING</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2020</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Enterway Bench</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Furniture</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Anodised Aluminum</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2020</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Multi-purpose, Flatpack</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (1/2)</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位 (2/2)</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 5: 3/24 -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">3/24</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2020</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Wall Clock</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Objects</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Steel</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2020</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Flatpack, Customisable</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 6: GREATE -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">GREATE</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2020</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Collapsible Crate</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Objects</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Powder-coated Steel</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2020</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Stackable, collapsible</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 7: SIGHT -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6 border-b border-[#1b4321]">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">SIGHT</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2018</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Magnetic Floor Lamp</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Lighting</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Anodised Aluminum</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2018</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Features:</span><span>Magnetic, multi-purpose</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 8: ROLLER (最后一个没有底部边框) -->
+      <article class="flex flex-col md:flex-row py-4 md:py-6">
+        <div class="w-full md:w-[15%] mb-4 md:mb-0 shrink-0">
+          <h2 class="text-xl md:text-2xl uppercase leading-tight font-normal">ROLLER</h2>
+          <p class="text-xl md:text-2xl leading-tight font-normal">2018</p>
+        </div>
+        <div class="w-full md:w-[25%] mb-4 md:mb-0 shrink-0 pr-4">
+          <ul class="text-xs md:text-sm leading-[1.3]">
+            <li class="flex"><span class="w-20 shrink-0">Type:</span><span>Table Lamp</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Category:</span><span>Lighting</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Client:</span><span>Prototype</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Material:</span><span>Aluminum</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Year:</span><span>2018</span></li>
+            <li class="flex"><span class="w-20 shrink-0">Feature:</span><span>Multi-purpose</span></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-[60%] flex gap-1 md:gap-2 overflow-x-auto no-scrollbar">
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+          <div class="relative shrink-0 w-48 md:w-64 aspect-[4/3] bg-[#d9d9d9] flex items-center justify-center overflow-hidden">
+            <div class="text-center"><svg class="w-6 h-6 mx-auto text-[#1b4321]/40 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span class="text-xs text-[#1b4321]/60">图片展位</span></div>
+          </div>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- 底部信息 / 社交链接 -->
+    <footer class="flex justify-between items-start border-t-[2px] border-[#1b4321] pt-2 mt-4">
+      <h2 class="text-xl md:text-2xl uppercase font-normal cursor-pointer hover:opacity-70 transition-opacity">INFO</h2>
+      <h2 class="text-xl md:text-2xl uppercase font-normal cursor-pointer hover:opacity-70 transition-opacity">INSTAGRAM</h2>
+    </footer>
+
+  </div>
+</body>
+</html>
