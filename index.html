@@ -331,5 +331,67 @@
     </footer>
 
   </div>
+<!-- 详情页弹窗 (Overlay) -->
+  <div id="detail-modal" class="fixed inset-0 z-50 bg-[#f0f0f0] flex flex-col transition-all duration-500 ease-out opacity-0 pointer-events-none translate-y-12">
+    <!-- 弹窗顶部导航：左侧返回，右侧标题 -->
+    <div class="flex justify-between items-end border-b-[2px] border-[#1b4321] pb-2 mb-2 px-4 py-6 md:px-8 md:py-8 shrink-0 bg-[#f0f0f0]">
+      <button id="close-modal" class="text-xl md:text-2xl uppercase font-normal cursor-pointer hover:opacity-50 transition-opacity flex items-center gap-2">
+        <span class="text-2xl font-light tracking-tighter">←</span>
+        <span>BACK</span>
+      </button>
+      <h1 id="modal-title" class="text-xl md:text-2xl uppercase font-normal text-right">PROJECT TITLE</h1>
+    </div>
+    
+    <!-- 无缝长图滚动区域 -->
+    <div class="flex-grow overflow-y-auto no-scrollbar w-full flex flex-col max-w-7xl mx-auto">
+      <!-- 随机高清图片展位 (利用 block 和去掉 margin 实现无缝拼接) -->
+      <img src="https://picsum.photos/1920/1080?random=1" class="w-full h-auto block object-cover" alt="Detail 1">
+      <img src="https://picsum.photos/1920/1080?random=2" class="w-full h-auto block object-cover" alt="Detail 2">
+      <img src="https://picsum.photos/1920/1080?random=3" class="w-full h-auto block object-cover" alt="Detail 3">
+      <img src="https://picsum.photos/1920/1080?random=4" class="w-full h-auto block object-cover" alt="Detail 4">
+    </div>
+  </div>
+
+  <!-- 交互逻辑脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('detail-modal');
+      const closeBtn = document.getElementById('close-modal');
+      const modalTitle = document.getElementById('modal-title');
+      
+      // 找到所有项目里的“图片展位”
+      const imagePlaceholders = document.querySelectorAll('article .overflow-x-auto > div');
+      
+      imagePlaceholders.forEach(el => {
+        // 通过 JS 批量给图片展位添加鼠标悬停指示（小手+变淡）
+        el.classList.add('cursor-pointer', 'transition-opacity', 'hover:opacity-80');
+        
+        el.addEventListener('click', function() {
+          // 获取当前点击的项目的标题，并更新到弹窗头部
+          const article = this.closest('article');
+          const title = article.querySelector('h2').innerText;
+          modalTitle.innerText = title;
+          
+          // 触发丝滑显示动效 (透明度0->1，位置底部上浮)
+          modal.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-12');
+          modal.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+          
+          // 禁用底层页面滚动，防止滑动穿透
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // 关闭弹窗逻辑
+      const closeModal = () => {
+        modal.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        modal.classList.add('opacity-0', 'pointer-events-none', 'translate-y-12');
+        
+        // 恢复底层页面滚动
+        document.body.style.overflow = '';
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+    });
+  </script>
 </body>
 </html>
